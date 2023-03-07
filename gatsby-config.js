@@ -1,13 +1,16 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
 module.exports = {
   siteMetadata: {
-    title: `John Jefferies Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "John Jefferies Portfolio",
   },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      }
+    },
   ],
-}
+};
