@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import { Link, graphql } from 'gatsby'
+import Layout from '../../components/layout'
+import Seo from '../../components/seo'
 
 const BlogPage = ({data}) => {
   return (
@@ -10,7 +10,11 @@ const BlogPage = ({data}) => {
       {
           data.allMdx.nodes.map((node) => (
               <article key={node.id}>
-                  <h2>{node.frontmatter.title}</h2>
+                  <h2>
+                    <Link to={`/projects/${node.frontmatter.slug}`}>
+                      {node.frontmatter.title}
+                      </Link>
+                    </h2>
                   <p>Posted: {node.frontmatter.date}</p>
                   <p>{node.excerpt}</p>
               </article>
@@ -25,11 +29,11 @@ query MyQuery {
     allMdx(sort: {frontmatter: {date: DESC}}) {
       nodes {
         frontmatter {
-          date
+          date(formatString: "MMMM D, YYYY")
           title
+          slug
         }
         id
-        excerpt
       }
     }
   }
