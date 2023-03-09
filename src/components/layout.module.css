@@ -1,27 +1,81 @@
-.container {
-    margin: auto;
-    max-width: 500px;
-    font-family: sans-serif;
-  }
-  
-  .heading {
-    color: rebeccapurple;
-  }
-  .nav-links {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-  }
-  .nav-link-item {
-    padding-right: 2rem;
-  }
-  .nav-link-text {
-    color: black;
-  }
+html {
+  height: 100%;
+}
 
-  .site-title {
-    font-size: 3rem;
-    color: gray;
-    font-weight: 700;
-    margin: 3rem 0;
-  }
+body {
+  margin: 0%;
+}
+
+.container {
+  margin: auto;
+  max-width: 600px;
+  font-family: sans-serif;
+  clear: both;
+  padding-top: 100px;
+}
+
+.heading {
+  color: #fd8a8a;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  border-bottom: #d0d7de 1px;
+  background-color: #f6f8fa;
+}
+
+.title-header {
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 50%;
+  height: 107px;
+  margin: 0;
+  padding-left: 10%;
+  font-size: 32px;
+}
+
+nav {
+  width: 50%;
+  float: right;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  float: right;
+}
+
+.nav-link-item {
+  padding-right: 3rem;
+  display: table-cell;
+}
+.nav-link-text {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #0969da;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-family: "Fira Code";
+  font-size: 1rem;
+  color: #0969da;
+  font-weight: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.home-image {
+  visibility: hidden;
+}
