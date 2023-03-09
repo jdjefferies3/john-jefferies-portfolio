@@ -8,6 +8,7 @@ import {
   navLinkText,
   siteTitle,
   titleHeader,
+  siteLogo
 } from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
@@ -24,7 +25,9 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div>
       <header className={siteTitle}>
-        <div className={titleHeader}>&lt;JJ&#62;</div>
+        <div className={titleHeader}>
+          <Link className={`${navLinkText} ${siteLogo}`} to="/">&lt;JJ&#62;</Link>
+        </div>
         <nav>
           <ul className={navLinks}>
             <li className={navLinkItem}>
